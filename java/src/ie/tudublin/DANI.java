@@ -1,8 +1,11 @@
 package ie.tudublin;
 
 import java.util.ArrayList;
+//import java.util.Array;
 
 import processing.core.PApplet;
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class DANI extends PApplet {
 
@@ -68,4 +71,34 @@ public class DANI extends PApplet {
 			return word + " " + count;
 		}
 	}
+
+	public class Word {
+		private String word;
+		private ArrayList follow;
+
+		public Word(String word, ArrayList follow){
+			this.word = word;
+			this.follow = follow;
+		}
+
+		public String getword(){ //Accessor method
+			return word;
+		}
+
+		public String toString() {
+			return word + " " + follow;
+		}
+	}
+
+	/* 
+	public void loadFile()
+	{
+		Table t = loadTable("tasks.csv", "header");
+		for (TableRow r:t.rows())
+		{
+			DANI n = new DANI(this, r);
+			DANI.add(n);
+		}
+	}
+	*/
 }
