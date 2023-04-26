@@ -44,61 +44,19 @@ public class DANI extends PApplet {
         textAlign(CENTER, CENTER);
         
 	}
-	//Follow class
-	public class Follow {
-		private String word;
-		private int count;
+	
 
-		public Follow(String word, int count){ //Constructor
-			this.word =  word;
-			this.count = count;
-		}
-
-		public String getWord() { //Accessor method
-			return word;
-		}
-
-		public int getCount(){
-			return count;
-		}
-
-		public void incrementCount() {
-			count++;
-		}
-
-		//toString method
-		public String toString() {
-			return word + " " + count;
+	public void loadFile(){
+		String[] lines = loadStrings("small.txt");
+		for (String line : lines) {
+			String[] words = split(line, ' ');
+			for (String word : words) {
+				this.words.add(word);
+			}
 		}
 	}
 
-	public class Word {
-		private String word;
-		private ArrayList follow;
-
-		public Word(String word, ArrayList follow){
-			this.word = word;
-			this.follow = follow;
-		}
-
-		public String getword(){ //Accessor method
-			return word;
-		}
-
-		public String toString() {
-			return word + " " + follow;
-		}
+	public boolean findWord(String str){
+		return false;
 	}
-
-	/* 
-	public void loadFile()
-	{
-		Table t = loadTable("tasks.csv", "header");
-		for (TableRow r:t.rows())
-		{
-			DANI n = new DANI(this, r);
-			DANI.add(n);
-		}
-	}
-	*/
 }
