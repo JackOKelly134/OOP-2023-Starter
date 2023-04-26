@@ -41,4 +41,31 @@ public class DANI extends PApplet {
         textAlign(CENTER, CENTER);
         
 	}
+	//Follow class
+	public class Follow {
+		private String word;
+		private int count;
+
+		public Follow(String word, int count){ //Constructor
+			this.word =  word;
+			this.count = count;
+		}
+
+		public String getWord() { //Accessor method
+			return word;
+		}
+
+		public int getCount(){
+			return count;
+		}
+
+		public void incrementCount() {
+			count++;
+		}
+
+		//toString method
+		public String toString() {
+			return word + " " + count;
+		}
+	}
 }
