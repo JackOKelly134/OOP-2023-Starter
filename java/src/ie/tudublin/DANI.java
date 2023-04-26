@@ -50,9 +50,7 @@ public class DANI extends PApplet {
 		String[] lines = loadStrings("small.txt");
 		for (String line : lines) {
 			String[] words = split(line, ' ');
-			for (String word : words) {
-				this.words.add(word);
-			}
+			
 		}
 	}
 
